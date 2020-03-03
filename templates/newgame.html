@@ -1,0 +1,10 @@
+{%  extends "layout.html" %}
+
+{%  block title %}New Game{%  endblock %}
+
+{%  block content %}
+<h1>New Game</h1>
+{% if 'name' in session %} 
+   Welcome to the game, {{ session['name'] }}<br>
+{% endif %}
+{%  endblock %}
