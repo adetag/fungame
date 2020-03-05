@@ -24,13 +24,17 @@
 
       <!-- BLOCK 4 -->
       <!-- stuff at right hand side -->
+      {% if 'name' in session %} 
+      <form action="/endgame" class="form-inline my-2 my-lg-0 nav navbar-nav navbar-right">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">End Game</button>
+      </form>
+      {% else %}
       <form action="/newgame" class="form-inline my-2 my-lg-0 nav navbar-nav navbar-right">
         <input class="form-control mr-sm-2" type="text" placeholder="Enter Name" aria-label="Name" name="name">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">New Game</button>
       </form>
-      <form action="/endgame" class="form-inline my-2 my-lg-0 nav navbar-nav navbar-right">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">End Game</button>
-      </form>
+      {% endif %}
+      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
