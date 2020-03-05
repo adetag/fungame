@@ -14,6 +14,11 @@ def render_newgame():
     session['name']=request.args['name']
     return render_template('newgame.html')
 
+@app.route('/endgame')
+def endgame():
+    session.clear()
+    return render_template('home.html')
+
 
 
 if __name__=="__main__":
