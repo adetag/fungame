@@ -26,6 +26,7 @@
       <!-- stuff at right hand side -->
       {% if 'name' in session %} 
       <form action="/endgame" class="form-inline my-2 my-lg-0 nav navbar-nav navbar-right">
+        <span class="player-name">{{ session['name'] }}</span>
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">End Game</button>
       </form>
       {% else %}
